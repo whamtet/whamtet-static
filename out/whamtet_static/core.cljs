@@ -21,5 +21,5 @@
     (set! (.-innerHTML (js/document.getElementById "content"))
           (apply str (interpose "<br/ >" (map pr-str data))))))
 
-(js/setTimeout
+(js/setInterval
  #(js/navigator.geolocation.getCurrentPosition show-position) 1000)
